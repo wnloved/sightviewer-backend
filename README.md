@@ -1,61 +1,62 @@
-🛠️ Backend for SightViewer Application
-📚 Description
+# 🛠️ Backend for SightViewer Application
+# 📚 Description
 The backend of the SightViewer application is built using NestJS and Prisma ORM. It works with a PostgreSQL database and integrates with Uploadcare cloud storage for image uploads.
 
-✅ Requirements
+# ✅ Requirements
 Node.js version >= 18.x
 PostgreSQL Server
 Uploadcare Account (optional)
-⚙️ Installation
+# ⚙️ Installation
 Install all required dependencies by running:
 
-
+```bash
 npm install
+
 or
 
-
 yarn install
-💾 Environment Setup (.env)
+```
+# 💾 Environment Setup (.env)
 Create a .env file in the root directory and configure it like so:
 
 
 DATABASE_URL="postgresql://%username%:%password%@localhost:5432/%databasename%?schema=public"
+
 SECRET_KEY=%JWTSECRETKEY%
+
 S3_PUBLIC_KEY=%YOURUPLOADCAREPUBLICKEY%
+
 S3_SECRET_KEY=%YOURUPLOADCARESECRETKEY%
+
 Where:
 
 DATABASE_URL: Your PostgreSQL connection string.
+
 SECRET_KEY: A secure JWT token signing key.
+
 S3_PUBLIC_KEY, S3_SECRET_KEY: Keys provided by your Uploadcare account for integrating with their cloud storage.
-🚀 Running the App
+
+# 🚀 Running the App
+
 Run the application locally:
-
-
+```bash
 npm run start:dev
-or
 
+or
 
 yarn start:dev
-🧪 Testing
-Execute unit/integration tests with:
+```
 
+# 🔥 Features
 
-npm test
-or
-
-
-yarn test
-🔥 Features
 The application includes:
 
 Authentication using JWT tokens.
-Uploading images via Uploadcare's cloud storage.
-CRUD operations for managing 'sights' and associated data models.
-🎯 License
-This project is released under the MIT license. Check out the full terms in the LICENSE file.
 
-🤗 Contributions are welcome! Please feel free to open issues or send PRs if you have any improvements or suggestions.
+Uploading images via Uploadcare's cloud storage.
+
+CRUD operations for managing 'sights' and associated data models.
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
