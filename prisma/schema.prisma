@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+model User {
+  id Int @id @default(autoincrement())
+  login String @unique
+  password String
+  admin Boolean
+}
+model Sight{
+  id Int @id @default(autoincrement())
+  identificator String @unique
+  name String
+  description String
+  place String
+  latitude String
+  longitude String
+  createdAt DateTime  @default(now())
+  maps String
+  photo_uuid String
+  watchedClients String[]
+  quantity Int
+  count Int
+  rating Float
+}
