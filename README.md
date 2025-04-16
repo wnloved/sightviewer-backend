@@ -1,3 +1,49 @@
+README — Backend for SightViewer Application
+Description
+The backend of the SightViewer application is developed using NestJS and Prisma ORM. The app supports working with a PostgreSQL database and integrates with an Uploadcare cloud storage service for image uploads.
+
+Requirements
+Node.js version >= 18.x
+PostgreSQL Server
+Uploadcare Account (optional)
+Installation
+Install all necessary dependencies by running the following command:
+
+
+npm install
+or
+
+
+yarn install
+Environment Setup (.env)
+Before starting the application, create a .env file in the root directory of your project and fill it with these fields:
+
+
+DATABASE_URL="postgresql://%username%:%password%@localhost:5432/%databasename%?schema=public"
+SECRET_KEY=%JWTSECRETKEY%
+S3_PUBLIC_KEY=%YOURUPLOADCAREPUBLICKEY%
+S3_SECRET_KEY=%YOURUPLOADCARESECRETKEY%
+DATABASE_URL: Connection string to your PostgreSQL database.
+SECRET_KEY: Secret key used for signing JWT tokens.
+S3_PUBLIC_KEY, S3_SECRET_KEY: Public access key and secret key from your Uploadcare account (for integration with cloud storage services).
+Running the App
+Start the application with this command:
+
+
+npm run start:dev
+or
+
+
+yarn start:dev
+Testing
+To run tests, use the following command:
+
+
+npm test
+or
+
+
+yarn test
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
