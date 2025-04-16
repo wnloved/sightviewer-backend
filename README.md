@@ -1,13 +1,13 @@
-README — Backend for SightViewer Application
-Description
-The backend of the SightViewer application is developed using NestJS and Prisma ORM. The app supports working with a PostgreSQL database and integrates with an Uploadcare cloud storage service for image uploads.
+🛠️ Backend for SightViewer Application
+📚 Description
+The backend of the SightViewer application is built using NestJS and Prisma ORM. It works with a PostgreSQL database and integrates with Uploadcare cloud storage for image uploads.
 
-Requirements
+✅ Requirements
 Node.js version >= 18.x
 PostgreSQL Server
 Uploadcare Account (optional)
-Installation
-Install all necessary dependencies by running the following command:
+⚙️ Installation
+Install all required dependencies by running:
 
 
 npm install
@@ -15,19 +15,21 @@ or
 
 
 yarn install
-Environment Setup (.env)
-Before starting the application, create a .env file in the root directory of your project and fill it with these fields:
+💾 Environment Setup (.env)
+Create a .env file in the root directory and configure it like so:
 
 
 DATABASE_URL="postgresql://%username%:%password%@localhost:5432/%databasename%?schema=public"
 SECRET_KEY=%JWTSECRETKEY%
 S3_PUBLIC_KEY=%YOURUPLOADCAREPUBLICKEY%
 S3_SECRET_KEY=%YOURUPLOADCARESECRETKEY%
-DATABASE_URL: Connection string to your PostgreSQL database.
-SECRET_KEY: Secret key used for signing JWT tokens.
-S3_PUBLIC_KEY, S3_SECRET_KEY: Public access key and secret key from your Uploadcare account (for integration with cloud storage services).
-Running the App
-Start the application with this command:
+Where:
+
+DATABASE_URL: Your PostgreSQL connection string.
+SECRET_KEY: A secure JWT token signing key.
+S3_PUBLIC_KEY, S3_SECRET_KEY: Keys provided by your Uploadcare account for integrating with their cloud storage.
+🚀 Running the App
+Run the application locally:
 
 
 npm run start:dev
@@ -35,8 +37,8 @@ or
 
 
 yarn start:dev
-Testing
-To run tests, use the following command:
+🧪 Testing
+Execute unit/integration tests with:
 
 
 npm test
@@ -44,6 +46,16 @@ or
 
 
 yarn test
+🔥 Features
+The application includes:
+
+Authentication using JWT tokens.
+Uploading images via Uploadcare's cloud storage.
+CRUD operations for managing 'sights' and associated data models.
+🎯 License
+This project is released under the MIT license. Check out the full terms in the LICENSE file.
+
+🤗 Contributions are welcome! Please feel free to open issues or send PRs if you have any improvements or suggestions.
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
